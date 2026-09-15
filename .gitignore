@@ -1,0 +1,7 @@
+# macOS / editor cruft
+.DS_Store
+*.swp
+
+# Local preview artifacts
+__pycache__/
+*.pyc
