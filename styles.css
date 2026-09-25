@@ -484,22 +484,11 @@ h1, h2, h3, p { margin: 0; }
   margin: 0 2.25rem;
 }
 
-.track__desc + .track__desc,
-.track__cite {
+.track__desc + .track__desc {
   margin-top: 1rem;
 }
 
-.track__cite {
-  margin: 1rem 2.25rem 2.25rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--ink-faint);
-  line-height: var(--lead-body);
-}
-.track__cite em { font-family: var(--font-heading); font-style: italic; }
-
-.track > .track__desc:last-child,
-.track > .track__cite:last-child { padding-bottom: 2.25rem; }
+.track > .track__desc:last-child { padding-bottom: 2.25rem; }
 .track > *:last-child { margin-bottom: 2.25rem; }
 
 @media (max-width: 760px) {
