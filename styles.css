@@ -253,7 +253,7 @@ h1, h2, h3, p { margin: 0; }
 .hero__dates {
   font-family: var(--font-body);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.575rem;
   margin-top: 1.5rem;
   opacity: 0.85;
   text-shadow: 0 1px 20px rgba(0, 0, 0, 0.35);
@@ -271,9 +271,9 @@ h1, h2, h3, p { margin: 0; }
   display: inline-block;
   padding: 0.85rem 1.6rem;
   border-radius: 999px;
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: 1.275rem;
-  letter-spacing: 0.01em;
+  letter-spacing: var(--track-snug);
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -392,7 +392,7 @@ h1, h2, h3, p { margin: 0; }
   align-self: start;
 }
 
-.facts--trio { grid-template-columns: repeat(3, 1fr); }
+.facts--quad { grid-template-columns: repeat(4, 1fr); }
 
 .fact {
   background: rgba(251, 243, 232, 0.75);
@@ -419,8 +419,11 @@ h1, h2, h3, p { margin: 0; }
   color: var(--ink-faint);
 }
 
-@media (max-width: 640px) {
-  .facts--trio { grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .facts--quad { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .facts--quad { grid-template-columns: 1fr; }
 }
 
 /* ------------------------------------------------------------------
