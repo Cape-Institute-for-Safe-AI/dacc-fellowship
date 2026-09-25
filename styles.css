@@ -353,7 +353,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .vision__hope {
-  margin-top: clamp(4rem, 8vw, 7rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
 }
 
 .subhead {
