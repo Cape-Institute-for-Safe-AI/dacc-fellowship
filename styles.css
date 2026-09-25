@@ -463,14 +463,6 @@ h1, h2, h3, p { margin: 0; }
   border-bottom: 1px solid rgba(42, 38, 32, 0.1);
 }
 
-.track__num {
-  font-family: var(--font-body);
-  font-style: italic;
-  font-size: 0.9rem;
-  color: var(--ember);
-  margin: 2rem 2.25rem 1.25rem;
-}
-
 .track__title {
   font-family: var(--font-heading);
   font-weight: 400;
@@ -478,7 +470,7 @@ h1, h2, h3, p { margin: 0; }
   line-height: var(--lead-display);
   letter-spacing: var(--track-tight);
   color: var(--ink);
-  margin: 0 2.25rem 1rem;
+  margin: 2rem 2.25rem 1rem;
 }
 
 .track__desc {
