@@ -354,8 +354,6 @@ h1, h2, h3, p { margin: 0; }
 
 .vision__hope {
   margin-top: clamp(4rem, 8vw, 7rem);
-  padding-top: clamp(3rem, 6vw, 5rem);
-  border-top: 1px solid rgba(42, 38, 32, 0.12);
 }
 
 .subhead {
@@ -527,6 +525,14 @@ h1, h2, h3, p { margin: 0; }
   border-top: 1px solid rgba(42, 38, 32, 0.12);
 }
 .theory-block:first-of-type { margin-top: clamp(2.5rem, 5vw, 4rem); }
+
+.theory-block__image {
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2rem;
+}
 
 .theory-block .prose {
   font-size: 1.0625rem;
