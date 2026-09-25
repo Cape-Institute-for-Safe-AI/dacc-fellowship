@@ -349,7 +349,7 @@ h1, h2, h3, p { margin: 0; }
 .section--vision {
   background:
     radial-gradient(ellipse 60% 40% at 80% 0%, rgba(240, 201, 162, 0.35), transparent 70%),
-    var(--cream);
+    var(--sand);
 }
 
 .vision__hope {
