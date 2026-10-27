@@ -1,0 +1,113 @@
+# Prompts for the site illustrations.
+#
+# Edit a `subject` (or the shared `style`), then regenerate just that image:
+#   python3 scripts/generate_illustrations.py hope
+# Regenerate everything:
+#   python3 scripts/generate_illustrations.py all
+#
+# The final prompt sent is "<subject>, <style>", extending the CISAI brand
+# guide's formula: "[subject], futuristic, solarpunk, hopeful, illustration
+# in the style of moebius".
+#
+# Where the style comes from. The `style` block below is CISAI's illustration
+# influences distilled into prompt language: Moebius line, Lutohin's biomorphic
+# retro-futurism, Daniel Martin Diaz's annotated schematic plate, Colorpong's
+# network geometry, and the spot-colour flatness of a Simon Berndt screenprint.
+# Artists are described here, never uploaded — see the `references` note below.
+# (Website and interface references are a separate list, kept in
+# DESIGN-REFERENCES.md in the website repo. Never feed those to the generator.)
+#
+# Style references: every image in the `references` folder is sent with
+# every prompt (PNG, JPG or WebP; 16 images max in total). Keep this folder
+# to images CISAI owns — its own illustrations and approved outputs. Other
+# artists' work belongs in words in `style`, not uploaded here. Keep the set
+# stylistically consistent; mixed styles dilute the result.
+#
+# Per-image fields:
+#   subject     what to draw (the part you'll usually edit)
+#   alt         alt text; the script writes it into index.html
+#   resize      optional [width, height] applied after generation
+#   crop        true trims the image to its drawn subject
+#   references  optional list of extra image paths sent for this image only,
+#               e.g. a photo of the real skyline to guide the layout
+
+model: gpt-image-2
+size: 1536x1024
+quality: high
+references: assets/brand/style-references
+
+style: >-
+  futuristic, solarpunk, hopeful, illustration in the style of moebius, drawn
+  as a retro-futurist technical plate. Clean unvarying ink contour with no
+  hatching, flat cel shading, and the limited spot-colour flatness of a
+  screenprint: warm peach, sand and periwinkle blue with small touches of deep
+  red and green. Build the subject the way a 1970s cutaway diagram would —
+  measured rule lines, node-and-network geometry, instrument faces and exposed
+  structure, and a few slender leader lines that each resolve into a small
+  hexagonal inset vignette drawing a detail of the structure in close-up; never
+  leave a leader line trailing into empty space — while
+  keeping the forms biomorphic and hand-drawn rather than mechanical. Match
+  the reference images in linework and palette, and take only their drawing
+  style, not their subjects or composition. Isolated subject on a plain pure
+  white background, no ground plane, no sky, no text, no lettering, no
+  numerals, no border.
+
+images:
+  hero:
+    subject: >-
+      a floating island hovering in the sky with table mountain at its centre,
+      a solarpunk Cape Town village of domed buildings, gardens and solar
+      canopies, the whole settlement protected by a delicate translucent dome
+      made of a hexagonal lattice, the presence of water, warm colours
+    alt: A floating island with Table Mountain at its centre, a solarpunk village sheltered beneath a translucent hexagonal dome
+    crop: true
+
+  resilience:
+    subject: >-
+      a small floating island fortress with layered terraced walls built from
+      hexagonal stone cells, wind turbines, greenhouses and a lighthouse, a
+      faint hexagonal shield arcing over it, calm and secure
+    alt: A terraced island fortress of hexagonal stone, with wind turbines and greenhouses beneath a faint shield
+    resize: [1200, 800]
+
+  coordination:
+    subject: >-
+      several small floating islands connected by rope bridges, cables and
+      gondolas, people crossing between them carrying supplies, a shared plaza
+      in the middle, warm colours
+    alt: Small floating islands linked by rope bridges and gondolas, with people crossing between them
+    resize: [1200, 800]
+
+  empowerment:
+    subject: >-
+      a floating island workshop where a few people build and repair their own
+      small machines, solar kites, hand-held devices and a community radio
+      mast, tools and plants everywhere, warm colours
+    alt: An island workshop where people build and repair their own machines, solar kites and a community radio mast
+    resize: [1200, 800]
+
+  hope:
+    subject: >-
+      a floating island meadow of wildflowers with a tall crystalline
+      observatory, children and elders looking out at a sunrise through a
+      telescope, a winding path upward, warm colours
+    alt: A wildflower meadow island with a crystalline observatory, people watching a sunrise through a telescope
+    resize: [1200, 800]
+
+  dacc-hex:
+    subject: >-
+      a great tree whose trunk and canopy are formed by an open lattice of
+      hexagonal cells, growing from a small floating rock, tiny people tending
+      it and building new cells, warm colours
+    alt: A tree whose trunk and canopy are an open lattice of hexagonal cells, tended by small figures building new cells
+    resize: [1200, 800]
+    crop: true
+
+  cape-town:
+    subject: >-
+      a solarpunk Cape Town on a floating island: Table Mountain and Lion's
+      Head behind, a waterfront of low domed buildings, rooftop gardens,
+      sailing boats and a cable car, warm colours
+    alt: A solarpunk Cape Town waterfront on a floating island, with Table Mountain and Lion's Head behind
+    resize: [1200, 800]
+    crop: true

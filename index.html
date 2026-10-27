@@ -11,363 +11,401 @@
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/icon-192.png">
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Axion.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="ht-nav">
-    <nav class="nav">
-      <a href="https://www.cisai.co" target="_blank" rel="noopener" class="nav__brand" aria-label="Cape Institute for Safe AI — d/acc Fellowship">d/acc Fellowship</a>
-      <div class="nav__links">
-        <a href="#about">About</a>
-        <a href="#tracks">Tracks</a>
-        <a href="#key-details">Details</a>
-        <a href="#theory">Theory of Change</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="nav__cta">Apply</a>
-    </nav>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="#top" class="pillar" aria-label="d/acc Fellowship, a Cape Institute for Safe AI program">
+        <img src="assets/brand/mark.png" alt="" class="pillar__mark" width="44" height="44">
+        <span class="pillar__rule" aria-hidden="true"></span>
+        <span class="pillar__name">d/acc Fellowship</span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#about"><span class="nav-label">About</span></a>
+        <a href="#tracks"><span class="nav-label">Tracks</span></a>
+        <a href="#key-details"><span class="nav-label">Details</span></a>
+        <a href="#theory"><span class="nav-label">Theory of change</span></a>
+        <a href="#faq"><span class="nav-label">FAQ</span></a>
+      </nav>
+      <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="btn btn--small">Apply</a>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <header id="top" class="hero">
-    <div class="hero__image" role="img" aria-label="A solarpunk city enclosed in a luminous protective dome at golden hour"></div>
-    <div class="hero__veil"></div>
-    <div class="hero__content">
-      <h1 class="hero__title">d/acc<br>Fellowship</h1>
-      <p class="hero__tagline">Cultivating human agency in a rapidly changing world.</p>
-      <p class="hero__dates">Cape Town · March – June 2027</p>
-      <div class="hero__actions">
-        <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="btn btn--primary">Apply as a Fellow</a>
-      </div>
-    </div>
-    <div class="hero__scroll" aria-hidden="true"><span></span></div>
-  </header>
+  <main>
 
-  <!-- ABOUT -->
-  <section id="about" class="section section--vision">
-    <div class="container container--narrow">
-      <h2 class="display">The world is changing rapidly.</h2>
-      <div class="prose prose--large">
-        <p>Humanity is entering an era of unprecedented uncertainty, complexity, and volatility. The surging current of technological progress threatens to overwhelm existing institutions, exacerbating existing fragilities. To flourish in such a world, we must build systemic resilience, increase our ability to coordinate to solve collective problems, and empower humanity.</p>
-      </div>
-    </div>
-
-    <div class="container container--narrow vision__hope">
-      <h3 class="subhead">The nature of this program</h3>
-      <div class="prose prose--large">
-        <p>This is a mentorship-based, in-person fellowship program, where we aim to accelerate <a href="https://blog.cosmos-institute.org/p/the-philosopher-builder" target="_blank" rel="noopener" class="inline-link">philosopher-builders</a> to develop interventions that serve humanity in the aforementioned ways. Fellows are paired with established mentors, and develop a project alongside a cohort of peers over three months. The fellowship will run from March to June 2027, and will be hosted at the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a>'s office space. Participants will be provided with resources for building their knowledge and network, and financial support covering their living and travel expenses.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <ul class="facts facts--quad">
-        <li class="fact">
-          <span class="fact__value">3 months</span>
-          <span class="fact__label">in residence</span>
-        </li>
-        <li class="fact">
-          <span class="fact__value">Mar – Jun 2027</span>
-          <span class="fact__label">program dates</span>
-        </li>
-        <li class="fact">
-          <span class="fact__value">Cape Town</span>
-          <span class="fact__label">hosted at the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a></span>
-        </li>
-        <li class="fact">
-          <span class="fact__value">$3,500/mo</span>
-          <span class="fact__label">stipend</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- TRACKS -->
-  <section id="tracks" class="section section--tracks">
-    <div class="container">
-      <h2 class="display">Four tracks for<br>differential acceleration.</h2>
-
-      <div class="tracks">
-
-        <article class="track">
-          <div class="track__image" style="background-image: url('assets/tracks/resilience.png')" role="img" aria-label="A flat field of glowing blue hexagonal tech cells lit from the center"></div>
-          <h3 class="track__title">Resilience</h3>
-          <p class="track__desc">This track includes developing the ability of humanity to defend against, build tolerance for, and adapt to the various threats that we face, along the axis of cyber, bio, and epistemic risks. This includes topics such as multi-agent security, increasing cyberdefence, and pandemic incident forecasting.</p>
-        </article>
-
-        <article class="track">
-          <div class="track__image" style="background-image: url('assets/tracks/coordination.png')" role="img" aria-label="A glowing globe wrapped in a network of nodes connecting major cities"></div>
-          <h3 class="track__title">Coordination</h3>
-          <p class="track__desc">This track refers to interventions that can produce pareto-optimal advances in inter-agent interactions, in systems of human, artificial, and mixed minds. This includes topics such as cooperative AI, AI for democracy, and building coalitions for steering AI outcomes.</p>
-        </article>
-
-        <article class="track">
-          <div class="track__image" style="background-image: url('assets/tracks/empowerment.png')" role="img" aria-label="Two slightly augmented human silhouettes talking at golden hour"></div>
-          <h3 class="track__title">Empowerment</h3>
-          <p class="track__desc">This track refers to interventions that empower and protect the sovereignty of a wide set of actors. This includes distributing AI capabilities safely, enabling greater individual control of personal data, and secure neurotech.</p>
-        </article>
-
-        <article class="track">
-          <div class="track__image" style="background-image: url('assets/tracks/hope.png')" role="img" aria-label="A translucent crystal hovering above an open wildflower field"></div>
-          <h3 class="track__title">Existential Hope</h3>
-          <p class="track__desc">This track refers to interventions that sketch out feasible and desirable visions for the future.</p>
-          <p class="track__desc">Existing work includes <a href="https://www.existentialhope.com/" target="_blank" rel="noopener" class="inline-link"><em>Existential Hope</em></a> by the Foresight Institute, <a href="https://www.forethought.org/research/design-sketches-for-a-more-sensible-world" target="_blank" rel="noopener" class="inline-link"><em>Design Sketches for a more sensible world</em></a> by Forethought, and <a href="https://airesilience.net/" target="_blank" rel="noopener" class="inline-link"><em>AI Resilience</em></a> by Kembery and Ammann.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- KEY DETAILS -->
-  <section id="key-details" class="section section--details">
-    <div class="container container--narrow">
-      <h2 class="display">Key details.</h2>
-
-      <dl class="details">
-        <div class="details__item">
-          <dt>Location</dt>
-          <dd>In-person in Cape Town, South Africa.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Application Deadline</dt>
-          <dd>22nd of November, 2026.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Commitment</dt>
-          <dd>This is a full-time program between March and June 2027. Generally, we will not accept candidates that have work commitments throughout the fellowship that exceed 10 hours/week, but please contact <a href="mailto:dacc@cisai.co" class="inline-link">dacc@cisai.co</a> to request an exception.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Stipend</dt>
-          <dd>$3,500/month for living expenses. Note that these are generous given the comparatively low cost of living in South Africa.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Accommodation</dt>
-          <dd>Private room in a group house with other fellows.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Amenities</dt>
-          <dd>Premium workspace in central Cape Town, with easy access to a gym, yoga studio, and grocery stores. Great views of Table Mountain.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Travel Support</dt>
-          <dd>We cover flights to and from Cape Town.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Visas</dt>
-          <dd>Visa support can be provisioned if necessary though South Africa has 90-day visitor visas for many countries.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Compute Budget</dt>
-          <dd>We provide a compute budget of $1,500 for the duration of the fellowship.</dd>
-        </div>
-        <div class="details__item">
-          <dt>Participants</dt>
-          <dd>We are looking for candidates across the globe for this program. Additionally, we aim to provide special consideration to applicants who would otherwise have trouble accessing in-person programs in the UK or US due to visa requirements.</dd>
-        </div>
-      </dl>
-
-      <p class="details__note">If you have any questions, please see our <a href="#faq" class="inline-link">FAQ section</a> or watch the <a href="#" class="inline-link">webinar recording</a> for more details.</p>
-    </div>
-  </section>
-
-  <!-- THEORY OF CHANGE -->
-  <section id="theory" class="section section--theory">
-    <div class="container container--narrow">
-      <h2 class="display">Theory of Change</h2>
-
-      <div class="theory-block">
-        <div class="theory-block__image" style="background-image: url('assets/theory/dacc-hex.png')" role="img" aria-label="A radiating burst of glowing blue-violet hexagonal tech cells"></div>
-        <h3 class="subhead">Why d/acc?</h3>
-        <div class="prose">
-          <p>d/acc is a philosophy on technological progress introduced by Vitalik Buterin, that advocates for the differential advancement of technologies that support democracy, decentralisation, and defence. This view of selective technological progress is broadly optimistic about the value of technology, but recognises that some forms of technology create asymmetric risk and undermine plurality (Human.Tech, "Building the Future in the Andes."). Furthermore, d/acc emphasises that the distribution of technological advancement is critical for good futures, especially in relation to how technology affects power structures, and vice versa.</p>
-          <p>This fellowship aims to support agendas relating to technological progress that are relatively neglected, largely due to the fact that they require skepticism about the trustworthiness of tech companies, and aims to empower actors outside of the US, though not exclusively.</p>
-        </div>
-      </div>
-
-      <div class="theory-block">
-        <div class="theory-block__image" style="background-image: url('assets/theory/cape-town.png')" role="img" aria-label="A solarpunk Cape Town skyline beneath Table Mountain and Lion's Head at golden hour"></div>
-        <h3 class="subhead">Why Cape Town</h3>
-        <div class="prose">
-          <p>This fellowship is run by the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a> (CISAI). CISAI aims to be a world-class science and technology hub, specifically pushing the frontier of differential technological advancement. CISAI aims to attract <a href="https://blog.cosmos-institute.org/p/the-philosopher-builder" target="_blank" rel="noopener" class="inline-link">philosopher-builders</a> who recognise the importance of building systemic resilience, improving coordination around collective action problems, and empowering a pluralistic humanity. CISAI's advantage in this regard is its connections to some of the top academic institutions in Africa and Cape Town's existing position as a tourist hub that internationals are glad to travel to. We believe success at this aim will have local and national implications that could scale to the rest of the continent and the world.</p>
-          <p>Furthermore, the themes of this fellowship are particularly relevant to the broader African context than many existing agendas in AI safety, which often presume access to the frontier of AI development.</p>
-        </div>
-
-        <details class="read-more">
-          <summary>Read more</summary>
-          <div class="read-more__content">
-            <div class="read-more__item">
-              <h4>Resilience</h4>
-              <p>African nations are among the most vulnerable in terms of cyber, bio, and epistemic risk, due to historically underdeveloped infrastructure and low rates of literacy. Preparing African nations with societal safeguards for the mass-adoption of AI will be crucial for preventing and mitigating human suffering.</p>
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <ul class="tags" aria-label="Program">
+            <li class="tag">Fellowship</li>
+            <li class="tag">Cape Town</li>
+            <li class="tag">Mar – Jun 2027</li>
+          </ul>
+          <h1 class="hero__title">d/acc Fellowship</h1>
+          <div class="box hero__box">
+            <p class="hero__tagline">Cultivating human agency in a rapidly changing world.</p>
+            <p class="body-lead">A three-month, in-person fellowship for philosopher-builders, hosted by the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a> in Cape Town from March to June 2027.</p>
+            <div class="hero__actions">
+              <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="btn">Apply as a fellow <span class="arrow" aria-hidden="true">→</span></a>
+              <a href="#tracks" class="btn btn--ghost">See the tracks</a>
             </div>
-            <div class="read-more__item">
-              <h4>Coordination</h4>
-              <p>South Africa is currently governed by a coalition government on the national level, and many municipalities are governed similarly. These coalitions are often weak and ineffectual, failing to steer the country into prosperity and often failing to provide basic services. Concurrently, pan-African institutions such as the African Union are often unable to effectively govern continental outcomes. We believe that technology can be used beneficially in this context to uplift human coordination and resolve resource sharing problems. This perspective aligns with the Continental Strategy on AI outlined by the African Union.</p>
+            <p class="hero__deadline"><span class="dot" aria-hidden="true"></span>Applications close 22 November 2026</p>
+          </div>
+        </div>
+        <figure class="hero__image">
+          <img src="assets/illustrations/hero.webp" width="1473" height="980" alt="A floating island with Table Mountain at its centre, a solarpunk village sheltered beneath a translucent hexagonal dome">
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <ul class="facts">
+          <li class="fact">
+            <span class="fact__value">3 months</span>
+            <span class="fact__label">in residence</span>
+          </li>
+          <li class="fact">
+            <span class="fact__value">Mar – Jun 2027</span>
+            <span class="fact__label">program dates</span>
+          </li>
+          <li class="fact">
+            <span class="fact__value">Cape Town</span>
+            <span class="fact__label">hosted at the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a></span>
+          </li>
+          <li class="fact">
+            <span class="fact__value">$3,500/mo</span>
+            <span class="fact__label">stipend</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap split">
+        <div class="split__head">
+          <h2 class="section-title">The world is changing rapidly.</h2>
+        </div>
+        <div class="split__body">
+          <div class="box">
+            <p class="body-lead">Humanity is entering an era of unprecedented uncertainty, complexity, and volatility. The surging current of technological progress threatens to overwhelm existing institutions, exacerbating existing fragilities. To flourish in such a world, we must build systemic resilience, increase our ability to coordinate to solve collective problems, and empower humanity.</p>
+            <h3 class="box__subhead">The nature of this program</h3>
+            <p class="body-lead">This is a mentorship-based, in-person fellowship program, where we aim to accelerate <a href="https://blog.cosmos-institute.org/p/the-philosopher-builder" target="_blank" rel="noopener" class="inline-link">philosopher-builders</a> to develop interventions that serve humanity in the aforementioned ways. Fellows are paired with established mentors, and develop a project alongside a cohort of peers over three months. The fellowship will run from March to June 2027, and will be hosted at the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a>'s office space. Participants will be provided with resources for building their knowledge and network, and financial support covering their living and travel expenses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACKS -->
+    <section id="tracks" class="section">
+      <div class="wrap">
+        <h2 class="section-title">Four tracks for differential acceleration.</h2>
+
+        <div class="tracks">
+          <article class="track">
+            <img class="track__image" src="assets/illustrations/resilience.webp" width="1200" height="800" loading="lazy" alt="A terraced island fortress of hexagonal stone, with wind turbines and greenhouses beneath a faint shield">
+            <div class="track__body">
+              <h3 class="track__title">Resilience</h3>
+              <p class="track__desc">This track includes developing the ability of humanity to defend against, build tolerance for, and adapt to the various threats that we face, along the axis of cyber, bio, and epistemic risks. This includes topics such as multi-agent security, increasing cyberdefence, and pandemic incident forecasting.</p>
             </div>
-            <div class="read-more__item">
-              <h4>Empowerment</h4>
-              <p>Africa is expected to have rapid AI adoption, given that it is, demographically, the youngest, most quickly growing continent. AI could easily create dynamics that create further fragmentation, oppression, and disempowerment. Creating pathways for Africans to empower themselves would have large implications for the wellbeing of humans on the continent and future generations.</p>
+          </article>
+
+          <article class="track">
+            <img class="track__image" src="assets/illustrations/coordination.webp" width="1200" height="800" loading="lazy" alt="Small floating islands linked by rope bridges and gondolas, with people crossing between them">
+            <div class="track__body">
+              <h3 class="track__title">Coordination</h3>
+              <p class="track__desc">This track refers to interventions that can produce pareto-optimal advances in inter-agent interactions, in systems of human, artificial, and mixed minds. This includes topics such as cooperative AI, AI for democracy, and building coalitions for steering AI outcomes.</p>
             </div>
-            <div class="read-more__item">
-              <h4>Hope</h4>
-              <p>Africa is highly diverse culturally, and there are often tensions between groups. Providing an inspiring and enlivening vision of the future for people to work towards together would be beautiful.</p>
+          </article>
+
+          <article class="track">
+            <img class="track__image" src="assets/illustrations/empowerment.webp" width="1200" height="800" loading="lazy" alt="An island workshop where people build and repair their own machines, solar kites and a community radio mast">
+            <div class="track__body">
+              <h3 class="track__title">Empowerment</h3>
+              <p class="track__desc">This track refers to interventions that empower and protect the sovereignty of a wide set of actors. This includes distributing AI capabilities safely, enabling greater individual control of personal data, and secure neurotech.</p>
             </div>
-          </div>
-        </details>
+          </article>
+
+          <article class="track">
+            <img class="track__image" src="assets/illustrations/hope.webp" width="1200" height="800" loading="lazy" alt="A wildflower meadow island with a crystalline observatory, people watching a sunrise through a telescope">
+            <div class="track__body">
+              <h3 class="track__title">Existential hope</h3>
+              <p class="track__desc">This track refers to interventions that sketch out feasible and desirable visions for the future.</p>
+              <p class="track__desc">Existing work includes <a href="https://www.existentialhope.com/" target="_blank" rel="noopener" class="inline-link"><em>Existential Hope</em></a> by the Foresight Institute, <a href="https://www.forethought.org/research/design-sketches-for-a-more-sensible-world" target="_blank" rel="noopener" class="inline-link"><em>Design Sketches for a more sensible world</em></a> by Forethought, and <a href="https://airesilience.net/" target="_blank" rel="noopener" class="inline-link"><em>AI Resilience</em></a> by Kembery and Ammann.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="section section--faq">
-    <div class="container container--narrow">
-      <h2 class="display">Frequently asked questions.</h2>
-
-      <div class="faq">
-
-        <details class="faq__item">
-          <summary>How does mentor matching work?</summary>
-          <div class="faq__answer">
-            <p>If you reach the mentor matching stage, you will be matched with mentors based on research interests and compatibility. If you receive an offer from one mentor, you will be able to work with that mentor. If you receive multiple offers from different mentors, you will have the opportunity to choose which mentor you prefer to work with. Note that each mentor-mentee pairing will still need to be approved by our team at this stage, but we expect the vast majority of pairings to be approved.</p>
+    <!-- KEY DETAILS -->
+    <section id="key-details" class="section">
+      <div class="wrap split">
+        <div class="split__head">
+          <h2 class="section-title">Key details.</h2>
+        </div>
+        <div class="split__body">
+          <div class="box">
+          <dl class="details">
+            <div class="details__item">
+              <dt>Location</dt>
+              <dd>In-person in Cape Town, South Africa.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Application deadline</dt>
+              <dd>22nd of November, 2026.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Commitment</dt>
+              <dd>This is a full-time program between March and June 2027. Generally, we will not accept candidates that have work commitments throughout the fellowship that exceed 10 hours/week, but please contact <a href="mailto:dacc@cisai.co" class="inline-link">dacc@cisai.co</a> to request an exception.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Stipend</dt>
+              <dd>$3,500/month for living expenses. Note that these are generous given the comparatively low cost of living in South Africa.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Accommodation</dt>
+              <dd>Private room in a group house with other fellows.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Amenities</dt>
+              <dd>Premium workspace in central Cape Town, with easy access to a gym, yoga studio, and grocery stores. Great views of Table Mountain.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Travel support</dt>
+              <dd>We cover flights to and from Cape Town.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Visas</dt>
+              <dd>Visa support can be provisioned if necessary though South Africa has 90-day visitor visas for many countries.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Compute budget</dt>
+              <dd>We provide a compute budget of $1,500 for the duration of the fellowship.</dd>
+            </div>
+            <div class="details__item">
+              <dt>Participants</dt>
+              <dd>We are looking for candidates across the globe for this program. Additionally, we aim to provide special consideration to applicants who would otherwise have trouble accessing in-person programs in the UK or US due to visa requirements.</dd>
+            </div>
+          </dl>
+          <p class="details__note">If you have any questions, please see our <a href="#faq" class="inline-link">FAQ section</a> or watch the <a href="#" class="inline-link">webinar recording</a> for more details.</p>
           </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>How does the application process work?</summary>
-          <div class="faq__answer">
-            <p>This will be a five-phase application process. The first phase will take approximately 45–75 minutes to complete. We encourage you to submit your application even if it feels unpolished; we value authenticity and substance over perfect presentation. We value inclusion and encourage applicants from diverse backgrounds. Please contact us if you require special accommodation in order to apply.</p>
-            <ol class="phases">
-              <li>
-                <h4>Phase 1 — Initial Review <span class="phases__deadline">deadline 22 November 2026</span></h4>
-                <p>Applications are reviewed on a rolling basis with decisions made by late December, 2026. Early submission is encouraged.</p>
-              </li>
-              <li>
-                <h4>Phase 2 — Paid Work Sample <span class="phases__deadline">2–3 hours</span></h4>
-                <p>Selected candidates will be asked to complete a compensated research task.</p>
-              </li>
-              <li>
-                <h4>Phase 3 — Interview</h4>
-                <p>Selected candidates will participate in a 45–60 minute interview with program staff.</p>
-              </li>
-              <li>
-                <h4>Phase 4 — Mentor Matching and Offers</h4>
-                <p>Selected candidates will be interviewed by one or more mentors based on research interests and compatibility, who will make suitable candidates an offer.</p>
-              </li>
-              <li>
-                <h4>Phase 5 — Final Offers</h4>
-                <p>Here, our team reviews the final mentor-mentee pairings to ensure their projects are within scope, and may conduct additional assessments if needed.</p>
-              </li>
-            </ol>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>What are the program's selection criteria?</summary>
-          <div class="faq__answer">
-            <p>We welcome participants from anywhere in the world, from many levels of experience, but a basic understanding of machine learning is required (i.e. the equivalent of having completed one undergraduate course in ML). Our intention for this fellowship is to catalyse career growth in early-stage researchers who aim to contribute significantly to the fields of AI safety and d/acc. As such, we are looking for candidates with high potential whose careers could be significantly accelerated by this program. As evidence of this, we evaluate applications based on the following criteria:</p>
-            <dl class="criteria">
-              <div class="criteria__item">
-                <dt>General Program Fit</dt>
-                <dd>We look for candidates who have demonstrated the ability to complete projects, solve problems independently, and drive results despite obstacles or uncertainty. We also look for candidates who have demonstrated prior engagement with topics in AI safety or d/acc related fields through reading, coursework, workshops, conferences, or other learning activities.</dd>
-              </div>
-              <div class="criteria__item">
-                <dt>Domain Competence &amp; Research Skills</dt>
-                <dd>We value experience relating to the field that you wish to contribute to. This may include relevant coursework, skills, publications or other evidence of track record, appropriate to your career stage.</dd>
-              </div>
-              <div class="criteria__item">
-                <dt>Career Goals</dt>
-                <dd>We expect clear alignment between the fellowship and your career aspirations. It should make sense why this fellowship is a natural next step for where you want to go in your career. Beyond this, we look for candidates with thoughtful, well-articulated plans for contributing to the field.</dd>
-              </div>
-              <div class="criteria__item">
-                <dt>Proposal Potential</dt>
-                <dd>We will examine the quality and feasibility of your proposed intervention within our tracks. We evaluate understanding of the research area, connection to existing literature, and potential for meaningful contribution within the 3-month timeline. Note that we expect many fellows will end up working on projects quite different from their original idea. Our main motivation for including this section is to test your ability to synthesize ideas and develop a promising direction.</dd>
-              </div>
-              <div class="criteria__item">
-                <dt>Counterfactual</dt>
-                <dd>We also consider the potential counterfactual impact of the fellowship on your career trajectory. We particularly look at candidates who would have limited access to similar opportunities elsewhere, those from underrepresented communities, or those who could significantly benefit from exposure to AI safety and the d/acc communities.</dd>
-              </div>
-            </dl>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>Where will fellows work?</summary>
-          <div class="faq__answer">
-            <p>All fellows will work from the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a>, an office space based in Kloof Street in central Cape Town.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>What is offered?</summary>
-          <div class="faq__answer">
-            <p>Fellows will receive mentorship, access to a global AI Safety research community and a stipend covering housing and living expenses.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>Can I participate part-time?</summary>
-          <div class="faq__answer">
-            <p>While we are strongly prioritising full-time participants for this program, you may attend part-time, though this will void your stipend.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>Can I participate remotely or what if I can only attend part of the program in-person?</summary>
-          <div class="faq__answer">
-            <p>To be eligible for this program, you must be able to attend at least 9 of the 12 weeks of the program in-person.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>Can I refer someone?</summary>
-          <div class="faq__answer">
-            <p>Yes! Please make use of our <a href="#" class="inline-link">referral form here</a> and ask the candidate to mention that you referred them when they apply. We also offer a referral award of $200 if you refer someone we end up accepting. Please read the description on the form for more details.</p>
-          </div>
-        </details>
-
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CALLS -->
-  <section id="calls" class="section section--calls">
-    <div class="container">
-      <h2 class="display display--light">We are looking for<br>fellows, mentors, funders,<br>and partners.</h2>
+    <!-- THEORY OF CHANGE -->
+    <section id="theory" class="section">
+      <div class="wrap">
+        <h2 class="section-title">Theory of change.</h2>
 
-      <div class="calls">
-        <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="call">
-          <span class="call__title">Fellows</span>
-          <span class="call__desc">Philosopher-builders ready to spend three months in Cape Town working on differential acceleration.</span>
-          <span class="call__arrow">→</span>
-        </a>
-        <a href="https://tally.so/r/44Ml2k" target="_blank" rel="noopener" class="call">
-          <span class="call__title">Mentors</span>
-          <span class="call__desc">Established builders, practitioners and thinkers willing to guide a fellow's work across one of our four tracks.</span>
-          <span class="call__arrow">→</span>
-        </a>
-        <a href="https://tally.so/r/RGAqzd" target="_blank" rel="noopener" class="call">
-          <span class="call__title">Funders</span>
-          <span class="call__desc">We need aligned funders who care about differential technological development, and building hubs in emerging ecosystems. Get in touch and we will follow up.</span>
-          <span class="call__arrow">→</span>
-        </a>
-        <a href="https://tally.so/r/2Ep94L" target="_blank" rel="noopener" class="call">
-          <span class="call__title">Partners</span>
-          <span class="call__desc">Organisations working on resilience, coordination, empowerment, or existential hope who want to collaborate. We are seeking help connecting to mentors, finding talent, and amplification of this program, and connecting fellows to opportunities post-fellowship.</span>
-          <span class="call__arrow">→</span>
-        </a>
+        <div class="theory">
+          <figure class="theory__image">
+            <img src="assets/illustrations/dacc-hex.webp" width="1105" height="791" loading="lazy" alt="A tree whose trunk and canopy are an open lattice of hexagonal cells, tended by small figures building new cells">
+          </figure>
+          <div class="box theory__text">
+            <h3 class="box__title">Why d/acc?</h3>
+            <p class="body-lead">d/acc is a philosophy on technological progress introduced by Vitalik Buterin, that advocates for the differential advancement of technologies that support democracy, decentralisation, and defence. This view of selective technological progress is broadly optimistic about the value of technology, but recognises that some forms of technology create asymmetric risk and undermine plurality (Human.Tech, "Building the Future in the Andes."). Furthermore, d/acc emphasises that the distribution of technological advancement is critical for good futures, especially in relation to how technology affects power structures, and vice versa.</p>
+            <p class="body-lead">This fellowship aims to support agendas relating to technological progress that are relatively neglected, largely due to the fact that they require skepticism about the trustworthiness of tech companies, and aims to empower actors outside of the US, though not exclusively.</p>
+          </div>
+        </div>
+
+        <div class="theory theory--flip">
+          <figure class="theory__image">
+            <img src="assets/illustrations/cape-town.webp" width="1186" height="768" loading="lazy" alt="A solarpunk Cape Town waterfront on a floating island, with Table Mountain and Lion&#x27;s Head behind">
+          </figure>
+          <div class="box theory__text">
+            <h3 class="box__title">Why Cape Town</h3>
+            <p class="body-lead">This fellowship is run by the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a> (CISAI). CISAI aims to be a world-class science and technology hub, specifically pushing the frontier of differential technological advancement. CISAI aims to attract <a href="https://blog.cosmos-institute.org/p/the-philosopher-builder" target="_blank" rel="noopener" class="inline-link">philosopher-builders</a> who recognise the importance of building systemic resilience, improving coordination around collective action problems, and empowering a pluralistic humanity. CISAI's advantage in this regard is its connections to some of the top academic institutions in Africa and Cape Town's existing position as a tourist hub that internationals are glad to travel to. We believe success at this aim will have local and national implications that could scale to the rest of the continent and the world.</p>
+            <p class="body-lead">Furthermore, the themes of this fellowship are particularly relevant to the broader African context than many existing agendas in AI safety, which often presume access to the frontier of AI development.</p>
+
+            <details class="read-more">
+              <summary>Read more</summary>
+              <div class="read-more__content">
+                <div class="read-more__item">
+                  <h4>Resilience</h4>
+                  <p>African nations are among the most vulnerable in terms of cyber, bio, and epistemic risk, due to historically underdeveloped infrastructure and low rates of literacy. Preparing African nations with societal safeguards for the mass-adoption of AI will be crucial for preventing and mitigating human suffering.</p>
+                </div>
+                <div class="read-more__item">
+                  <h4>Coordination</h4>
+                  <p>South Africa is currently governed by a coalition government on the national level, and many municipalities are governed similarly. These coalitions are often weak and ineffectual, failing to steer the country into prosperity and often failing to provide basic services. Concurrently, pan-African institutions such as the African Union are often unable to effectively govern continental outcomes. We believe that technology can be used beneficially in this context to uplift human coordination and resolve resource sharing problems. This perspective aligns with the Continental Strategy on AI outlined by the African Union.</p>
+                </div>
+                <div class="read-more__item">
+                  <h4>Empowerment</h4>
+                  <p>Africa is expected to have rapid AI adoption, given that it is, demographically, the youngest, most quickly growing continent. AI could easily create dynamics that create further fragmentation, oppression, and disempowerment. Creating pathways for Africans to empower themselves would have large implications for the wellbeing of humans on the continent and future generations.</p>
+                </div>
+                <div class="read-more__item">
+                  <h4>Hope</h4>
+                  <p>Africa is highly diverse culturally, and there are often tensions between groups. Providing an inspiring and enlivening vision of the future for people to work towards together would be beautiful.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <p class="footer__brand">d/acc Fellowship</p>
-        <p class="footer__sub">A program of the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a></p>
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap split">
+        <div class="split__head">
+          <h2 class="section-title">Frequently asked questions.</h2>
+        </div>
+        <div class="split__body">
+          <div class="box faq">
+
+            <details class="faq__item">
+              <summary>How does mentor matching work?</summary>
+              <div class="faq__answer">
+                <p>If you reach the mentor matching stage, you will be matched with mentors based on research interests and compatibility. If you receive an offer from one mentor, you will be able to work with that mentor. If you receive multiple offers from different mentors, you will have the opportunity to choose which mentor you prefer to work with. Note that each mentor-mentee pairing will still need to be approved by our team at this stage, but we expect the vast majority of pairings to be approved.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>How does the application process work?</summary>
+              <div class="faq__answer">
+                <p>This will be a five-phase application process. The first phase will take approximately 45–75 minutes to complete. We encourage you to submit your application even if it feels unpolished; we value authenticity and substance over perfect presentation. We value inclusion and encourage applicants from diverse backgrounds. Please contact us if you require special accommodation in order to apply.</p>
+                <ol class="phases">
+                  <li>
+                    <h4>Initial review <span class="phases__deadline">deadline 22 November 2026</span></h4>
+                    <p>Applications are reviewed on a rolling basis with decisions made by late December, 2026. Early submission is encouraged.</p>
+                  </li>
+                  <li>
+                    <h4>Paid work sample <span class="phases__deadline">2–3 hours</span></h4>
+                    <p>Selected candidates will be asked to complete a compensated research task.</p>
+                  </li>
+                  <li>
+                    <h4>Interview</h4>
+                    <p>Selected candidates will participate in a 45–60 minute interview with program staff.</p>
+                  </li>
+                  <li>
+                    <h4>Mentor matching and offers</h4>
+                    <p>Selected candidates will be interviewed by one or more mentors based on research interests and compatibility, who will make suitable candidates an offer.</p>
+                  </li>
+                  <li>
+                    <h4>Final offers</h4>
+                    <p>Here, our team reviews the final mentor-mentee pairings to ensure their projects are within scope, and may conduct additional assessments if needed.</p>
+                  </li>
+                </ol>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>What are the program's selection criteria?</summary>
+              <div class="faq__answer">
+                <p>We welcome participants from anywhere in the world, from many levels of experience, but a basic understanding of machine learning is required (i.e. the equivalent of having completed one undergraduate course in ML). Our intention for this fellowship is to catalyse career growth in early-stage researchers who aim to contribute significantly to the fields of AI safety and d/acc. As such, we are looking for candidates with high potential whose careers could be significantly accelerated by this program. As evidence of this, we evaluate applications based on the following criteria:</p>
+                <dl class="criteria">
+                  <div class="criteria__item">
+                    <dt>General program fit</dt>
+                    <dd>We look for candidates who have demonstrated the ability to complete projects, solve problems independently, and drive results despite obstacles or uncertainty. We also look for candidates who have demonstrated prior engagement with topics in AI safety or d/acc related fields through reading, coursework, workshops, conferences, or other learning activities.</dd>
+                  </div>
+                  <div class="criteria__item">
+                    <dt>Domain competence &amp; research skills</dt>
+                    <dd>We value experience relating to the field that you wish to contribute to. This may include relevant coursework, skills, publications or other evidence of track record, appropriate to your career stage.</dd>
+                  </div>
+                  <div class="criteria__item">
+                    <dt>Career goals</dt>
+                    <dd>We expect clear alignment between the fellowship and your career aspirations. It should make sense why this fellowship is a natural next step for where you want to go in your career. Beyond this, we look for candidates with thoughtful, well-articulated plans for contributing to the field.</dd>
+                  </div>
+                  <div class="criteria__item">
+                    <dt>Proposal potential</dt>
+                    <dd>We will examine the quality and feasibility of your proposed intervention within our tracks. We evaluate understanding of the research area, connection to existing literature, and potential for meaningful contribution within the 3-month timeline. Note that we expect many fellows will end up working on projects quite different from their original idea. Our main motivation for including this section is to test your ability to synthesize ideas and develop a promising direction.</dd>
+                  </div>
+                  <div class="criteria__item">
+                    <dt>Counterfactual</dt>
+                    <dd>We also consider the potential counterfactual impact of the fellowship on your career trajectory. We particularly look at candidates who would have limited access to similar opportunities elsewhere, those from underrepresented communities, or those who could significantly benefit from exposure to AI safety and the d/acc communities.</dd>
+                  </div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Where will fellows work?</summary>
+              <div class="faq__answer">
+                <p>All fellows will work from the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a>, an office space based in Kloof Street in central Cape Town.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>What is offered?</summary>
+              <div class="faq__answer">
+                <p>Fellows will receive mentorship, access to a global AI Safety research community and a stipend covering housing and living expenses.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Can I participate part-time?</summary>
+              <div class="faq__answer">
+                <p>While we are strongly prioritising full-time participants for this program, you may attend part-time, though this will void your stipend.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Can I participate remotely or what if I can only attend part of the program in-person?</summary>
+              <div class="faq__answer">
+                <p>To be eligible for this program, you must be able to attend at least 9 of the 12 weeks of the program in-person.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Can I refer someone?</summary>
+              <div class="faq__answer">
+                <p>Yes! Please make use of our <a href="#" class="inline-link">referral form here</a> and ask the candidate to mention that you referred them when they apply. We also offer a referral award of $200 if you refer someone we end up accepting. Please read the description on the form for more details.</p>
+              </div>
+            </details>
+
+          </div>
+        </div>
       </div>
-      <p class="footer__tag">Cultivating human agency in a rapidly changing world.</p>
+    </section>
+
+    <!-- CALLS -->
+    <section id="calls" class="section">
+      <div class="wrap">
+        <h2 class="section-title section-title--wide">We are looking for fellows, mentors, funders, and partners.</h2>
+
+        <div class="calls">
+          <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="call">
+            <span class="call__title">Fellows</span>
+            <span class="call__desc">Philosopher-builders ready to spend three months in Cape Town working on differential acceleration.</span>
+            <span class="call__cta">Apply <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a href="https://tally.so/r/44Ml2k" target="_blank" rel="noopener" class="call">
+            <span class="call__title">Mentors</span>
+            <span class="call__desc">Established builders, practitioners and thinkers willing to guide a fellow's work across one of our four tracks.</span>
+            <span class="call__cta">Express interest <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a href="https://tally.so/r/RGAqzd" target="_blank" rel="noopener" class="call">
+            <span class="call__title">Funders</span>
+            <span class="call__desc">We need aligned funders who care about differential technological development, and building hubs in emerging ecosystems. Get in touch and we will follow up.</span>
+            <span class="call__cta">Get in touch <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a href="https://tally.so/r/2Ep94L" target="_blank" rel="noopener" class="call">
+            <span class="call__title">Partners</span>
+            <span class="call__desc">Organisations working on resilience, coordination, empowerment, or existential hope who want to collaborate. We are seeking help connecting to mentors, finding talent, and amplification of this program, and connecting fellows to opportunities post-fellowship.</span>
+            <span class="call__cta">Partner with us <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <a href="https://www.cisai.co" target="_blank" rel="noopener" class="site-footer__logo">
+        <img src="assets/brand/logo.png" alt="CISAI — Cape Institute for Safe AI" width="207" height="51">
+      </a>
+      <div class="site-footer__text">
+        <p class="site-footer__tag">Cultivating human agency in a rapidly changing world.</p>
+        <p class="site-footer__sub">The d/acc Fellowship is a program of the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a>. Questions: <a href="mailto:dacc@cisai.co" class="inline-link">dacc@cisai.co</a></p>
+      </div>
     </div>
   </footer>
 
