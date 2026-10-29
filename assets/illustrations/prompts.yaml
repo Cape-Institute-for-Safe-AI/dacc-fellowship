@@ -62,52 +62,95 @@ images:
     alt: A floating island with Table Mountain at its centre, a solarpunk village sheltered beneath a translucent hexagonal dome
     crop: true
 
+  # The four track images (resilience, coordination, empowerment, hope) were
+  # last made with image-to-image passes and a shared track style: flat colour
+  # blocking, crisp hard boundaries, stepped tones, the palette cornflower
+  # #6495ED / misty blue #BCD4E6 / light salmon #FFA07A / coral red #FF4040,
+  # and Tuco Amalfi's radiant light and sacred geometry rendered as posterised
+  # flat colour. That style lives in each subject below because the shared
+  # `style` block still describes the hero. Resilience also had a light
+  # fisheye (barrel distortion, ~1.2x centre) applied after generation.
+
   resilience:
     subject: >-
-      a small floating island fortress with layered terraced walls built from
-      hexagonal stone cells, wind turbines, greenhouses and a lighthouse, a
-      faint hexagonal shield arcing over it, calm and secure
-    alt: A terraced island fortress of hexagonal stone, with wind turbines and greenhouses beneath a faint shield
-    resize: [1200, 800]
+      a straight-on, edge-to-edge honeycomb energy-field mesh of true six-
+      sided hexagons, machined steel spheres at every vertex, edges drawn
+      as energy conduits with fine tick marks, a fainter finer lattice
+      behind; concentric hexagonal rings step from a tight warm centre
+      (pale salmon, light salmon, coral red) out through misty blue to
+      cornflower, like a window onto the sun in a blue sky; faint ray
+      wedges and flower-of-life construction lines behind, nothing drone-
+      like, no viruses. Shared palette and treatment: flat colour
+      blocking, crisp hard boundaries, stepped tones in 2 to 4 flat bands,
+      never gradients; only cornflower #6495ED, misty blue #BCD4E6, light
+      salmon #FFA07A, coral red #FF4040, their tints, white and dark-navy
+      ink; Tuco Amalfi's radiant light and sacred geometry drawn as
+      posterised flat colour; full-bleed, no island
+    alt: A detailed hexagonal energy-field mesh with steel nodes, stepping from a warm coral centre to cornflower blue at the edges
+    resize: [1080, 720]
 
   coordination:
     subject: >-
-      several small floating islands connected by rope bridges, cables and
-      gondolas, people crossing between them carrying supplies, a shared plaza
-      in the middle, warm colours
-    alt: Small floating islands linked by rope bridges and gondolas, with people crossing between them
-    resize: [1200, 800]
+      a detailed globe with grid lines and a network of arcs linking
+      cities, oceans in stepped cornflower and misty blue, land in light
+      salmon with coral red city nodes, sacred-geometry construction lines
+      over the sphere and a halo of three concentric stepped bands,
+      isolated on pure white for a cutout. Shared palette and treatment:
+      flat colour blocking, crisp hard boundaries, stepped tones in 2 to 4
+      flat bands, never gradients; only cornflower #6495ED, misty blue
+      #BCD4E6, light salmon #FFA07A, coral red #FF4040, their tints, white
+      and dark-navy ink; Tuco Amalfi's radiant light and sacred geometry
+      drawn as posterised flat colour; no island
+    alt: The Earth wrapped in a network of connections linking cities across the globe
+    resize: [1080, 720]
+    crop: true
 
   empowerment:
     subject: >-
-      a floating island workshop where a few people build and repair their own
-      small machines, solar kites, hand-held devices and a community radio
-      mast, tools and plants everywhere, warm colours
-    alt: An island workshop where people build and repair their own machines, solar kites and a community radio mast
-    resize: [1200, 800]
+      three people walking and talking along a sunlit city street of low-
+      rise buildings and shopfronts, each with a small refined robot angel
+      on the shoulder that has a single sensor lens instead of a face and
+      a thin metal ring instead of a halo; realistic adult faces and
+      proportions, not anime; crisp flat ray wedges down the street and an
+      open luminous sky, no field, no dome. Shared palette and treatment:
+      flat colour blocking, crisp hard boundaries, stepped tones in 2 to 4
+      flat bands, never gradients; only cornflower #6495ED, misty blue
+      #BCD4E6, light salmon #FFA07A, coral red #FF4040, their tints, white
+      and dark-navy ink; Tuco Amalfi's radiant light and sacred geometry
+      drawn as posterised flat colour; full-bleed, no island
+    alt: Three people walking down a sunlit city street, each with a small robotic angel on their shoulder
+    resize: [1080, 720]
 
   hope:
     subject: >-
-      a floating island meadow of wildflowers with a tall crystalline
-      observatory, children and elders looking out at a sunrise through a
-      telescope, a winding path upward, warm colours
-    alt: A wildflower meadow island with a crystalline observatory, people watching a sunrise through a telescope
-    resize: [1200, 800]
+      a precisely cut faceted crystal hovering above calm rolling ground
+      at sunrise, exactly one sun low on the horizon to one side, its rays
+      splitting into flat prism bands as they pass through the crystal,
+      the crystal has no glow of its own; broad calm stepped bands of
+      ground with only a few flower clusters in the foreground; sky in
+      stepped bands, concentric construction circles around the crystal.
+      Shared palette and treatment: flat colour blocking, crisp hard
+      boundaries, stepped tones in 2 to 4 flat bands, never gradients;
+      only cornflower #6495ED, misty blue #BCD4E6, light salmon #FFA07A,
+      coral red #FF4040, their tints, white and dark-navy ink; Tuco
+      Amalfi's radiant light and sacred geometry drawn as posterised flat
+      colour; full-bleed, no island
+    alt: A faceted crystal hovering above calm rolling ground at sunrise
+    resize: [1080, 720]
 
   dacc-hex:
     subject: >-
-      a great tree whose trunk and canopy are formed by an open lattice of
-      hexagonal cells, growing from a small floating rock, tiny people tending
-      it and building new cells, warm colours
-    alt: A tree whose trunk and canopy are an open lattice of hexagonal cells, tended by small figures building new cells
-    resize: [1200, 800]
-    crop: true
+      a boy standing at a fork in the road with a bear labelled
+      Deceleration behind him; the left path leads to Domination
+      (centralized power), the right to Doom (existential risks, gray-zone
+      war of all against all), and the centre to <d/acc> (avoid all three
+      traps, secure bright future for humanity), full-bleed
+    alt: A boy stands at a fork in the road with a bear, Deceleration, behind him. The left path leads to Domination (centralized power), the right to Doom (existential risks, gray-zone war of all against all), and the centre to <d/acc> (Avoid all three traps, secure bright future for humanity).
+    resize: [1024, 1024]
 
   cape-town:
     subject: >-
-      a solarpunk Cape Town on a floating island: Table Mountain and Lion's
-      Head behind, a waterfront of low domed buildings, rooftop gardens,
-      sailing boats and a cable car, warm colours
-    alt: A solarpunk Cape Town waterfront on a floating island, with Table Mountain and Lion's Head behind
-    resize: [1200, 800]
-    crop: true
+      a solarpunk Cape Town of green buildings by the sea on real ground,
+      Table Mountain and Lion's Head behind, full-bleed, warm colours
+    alt: A solarpunk Cape Town of green buildings by the sea, with Table Mountain and Lion's Head behind
+    resize: [1280, 720]
