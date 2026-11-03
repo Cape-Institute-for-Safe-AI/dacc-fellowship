@@ -36,7 +36,7 @@
   --gutter: clamp(20px, 4vw, 56px);
   --section-pad: clamp(56px, 8vw, 104px);
   --max-width: 1240px;
-  --header-h: 76px;
+  --header-h: clamp(78px, 9.1vw, 109px); /* CISAI site header */
 
   /* Hex tile from cisai.co: 27.28 × 47.25 px, line only. */
   --hex-tile-size: 27.28px 47.25px;
@@ -177,60 +177,6 @@ ul, ol { padding: 0; list-style: none; }
   letter-spacing: 0.02em;
   background: var(--white);
 }
-
-/* ---------- Header: the brand-architecture "pillar" lockup ---------- */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--page);
-  border-bottom: var(--border);
-}
-
-.site-header__inner {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  height: var(--header-h);
-}
-
-.pillar {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.pillar__mark { width: 48px; height: 48px; }
-.pillar__rule { width: 1px; height: 36px; background: var(--ink); }
-.pillar__name { font-family: var(--font-display); font-size: 19px; letter-spacing: 0.01em; }
-
-.site-nav {
-  display: flex;
-  gap: clamp(18px, 2.4vw, 36px);
-  margin-left: auto;
-}
-.site-nav a {
-  font-family: var(--font-display);
-  font-size: 12.75px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  padding: 6px 0;
-}
-.nav-label { position: relative; padding-bottom: 4px; }
-.nav-label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: var(--blue);
-  transition: background 0.15s ease;
-}
-.site-nav a:hover .nav-label::after { background: var(--red); }
 
 /* ---------- Hero ---------- */
 
@@ -551,8 +497,6 @@ ul, ol { padding: 0; list-style: none; }
 
 @media (max-width: 1080px) {
   .calls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .site-nav { display: none; }
-  .site-header .btn--small { margin-left: auto; }
 }
 
 @media (max-width: 900px) {
@@ -569,15 +513,11 @@ ul, ol { padding: 0; list-style: none; }
 }
 
 @media (max-width: 640px) {
-  :root { --header-h: 64px; }
   .tracks,
   .calls,
   .details { grid-template-columns: minmax(0, 1fr); }
   .details__item:nth-child(2) { border-top: var(--border); padding-top: 20px; }
   .call { min-height: 0; }
-  .pillar__mark { width: 32px; height: 32px; }
-  .pillar__name { font-size: 16px; }
-  .pillar { gap: 12px; }
 }
 
 @media (max-width: 420px) {

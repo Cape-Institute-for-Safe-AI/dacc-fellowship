@@ -16,24 +16,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cisai-header.css">
 </head>
 <body>
 
+  <!-- CISAI site header, copied from cisai.co (programs.html). Links are
+       absolute until this page moves under cisai.co/programs. -->
   <header class="site-header">
     <div class="wrap site-header__inner">
-      <a href="#top" class="pillar" aria-label="d/acc Fellowship, a Cape Institute for Safe AI program">
-        <img src="assets/brand/mark.png" alt="" class="pillar__mark" width="44" height="44">
-        <span class="pillar__rule" aria-hidden="true"></span>
-        <span class="pillar__name">d/acc Fellowship</span>
+      <a href="https://cisai.co/index.html#home" class="logo-link" aria-label="Cape Institute for Safe AI — home">
+        <img src="assets/brand/cisai-logo.png" alt="Cape Institute for Safe AI" />
       </a>
-      <nav class="site-nav" aria-label="Sections">
-        <a href="#about"><span class="nav-label">About</span></a>
-        <a href="#tracks"><span class="nav-label">Tracks</span></a>
-        <a href="#key-details"><span class="nav-label">Details</span></a>
-        <a href="#theory"><span class="nav-label">Theory of change</span></a>
-        <a href="#faq"><span class="nav-label">FAQ</span></a>
+      <nav class="site-nav" id="site-nav">
+        <a href="https://cisai.co/index.html#about"><span class="nav-label">About</span></a>
+        <a href="https://cisai.co/research.html"><span class="nav-label">Research</span></a>
+        <div class="nav-item">
+          <a href="https://cisai.co/capacity-building.html" class="is-active"><span class="nav-label">Capacity Building</span></a>
+          <div class="nav-dropdown">
+            <a href="https://cisai.co/programs.html">Programs</a>
+            <a href="https://cisai.co/events.html">Events</a>
+            <a href="https://tally.so/r/obO5q1" target="_blank" rel="noopener">Co-working Space</a>
+          </div>
+        </div>
+        <a href="https://cisai.co/team.html"><span class="nav-label">Team</span></a>
+        <a href="https://cisai.co/get-involved.html"><span class="nav-label">Get Involved</span></a>
       </nav>
-      <a href="https://tally.so/r/xXA8dy" target="_blank" rel="noopener" class="btn btn--small">Apply</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="0" y1="1" x2="24" y2="1" stroke="#111111" stroke-width="2"/>
+          <line x1="0" y1="8" x2="24" y2="8" stroke="#111111" stroke-width="2"/>
+          <line x1="0" y1="15" x2="24" y2="15" stroke="#111111" stroke-width="2"/>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -43,12 +57,7 @@
     <section id="top" class="hero">
       <div class="wrap hero__grid">
         <div class="hero__text">
-          <ul class="tags" aria-label="Program">
-            <li class="tag">Fellowship</li>
-            <li class="tag">Cape Town</li>
-            <li class="tag">Mar – Jun 2027</li>
-          </ul>
-          <h1 class="hero__title">d/acc Fellowship</h1>
+          <h1 class="hero__title">Autumn 2027 Fellowship</h1>
           <div class="box hero__box">
             <p class="hero__tagline">Cultivating human agency in a rapidly changing world.</p>
             <p class="body-lead">A three-month, in-person fellowship for philosopher-builders, hosted by the <a href="https://www.cisai.co" target="_blank" rel="noopener" class="inline-link">Cape Institute for Safe AI</a> in Cape Town from March to June 2027.</p>
@@ -109,7 +118,7 @@
 
         <div class="tracks">
           <article class="track">
-            <img class="track__image" src="assets/illustrations/resilience.webp" width="1080" height="720" loading="lazy" alt="A detailed hexagonal energy-field mesh with steel nodes, stepping from a warm coral centre to cornflower blue at the edges">
+            <img class="track__image" src="assets/illustrations/resilience.webp" width="1080" height="720" loading="lazy" alt="A hexagonal energy-field shield: a honeycomb mesh of steel nodes and glowing blue conduits around a warm salmon centre">
             <div class="track__body">
               <h3 class="track__title">Resilience</h3>
               <p class="track__desc">This track includes developing the ability of humanity to defend against, build tolerance for, and adapt to the various threats that we face, along the axis of cyber, bio, and epistemic risks. This includes topics such as multi-agent security, increasing cyberdefence, and pandemic incident forecasting.</p>
@@ -125,7 +134,7 @@
           </article>
 
           <article class="track">
-            <img class="track__image" src="assets/illustrations/empowerment.webp" width="1080" height="720" loading="lazy" alt="Three people walking down a sunlit city street, each with a small robotic angel on their shoulder">
+            <img class="track__image" src="assets/illustrations/empowerment.webp" width="1080" height="720" loading="lazy" alt="A ring of dancers after Matisse, hands linked, alternating solid blue figures and iridescent chrome figures">
             <div class="track__body">
               <h3 class="track__title">Empowerment</h3>
               <p class="track__desc">This track refers to interventions that empower and protect the sovereignty of a wide set of actors. This includes distributing AI capabilities safely, enabling greater individual control of personal data, and secure neurotech.</p>
@@ -133,9 +142,9 @@
           </article>
 
           <article class="track">
-            <img class="track__image" src="assets/illustrations/hope.webp" width="1080" height="720" loading="lazy" alt="A faceted crystal hovering above calm rolling ground at sunrise">
+            <img class="track__image" src="assets/illustrations/hope.webp" width="1080" height="720" loading="lazy" alt="A dawn landscape seen through a telescope eyepiece: a faceted crystal hovering over rolling hills as the sun rises">
             <div class="track__body">
-              <h3 class="track__title">Existential hope</h3>
+              <h3 class="track__title">Hope</h3>
               <p class="track__desc">This track refers to interventions that sketch out feasible and desirable visions for the future.</p>
               <p class="track__desc">Existing work includes <a href="https://www.existentialhope.com/" target="_blank" rel="noopener" class="inline-link"><em>Existential Hope</em></a> by the Foresight Institute, <a href="https://www.forethought.org/research/design-sketches-for-a-more-sensible-world" target="_blank" rel="noopener" class="inline-link"><em>Design Sketches for a more sensible world</em></a> by Forethought, and <a href="https://airesilience.net/" target="_blank" rel="noopener" class="inline-link"><em>AI Resilience</em></a> by Kembery and Ammann.</p>
             </div>
@@ -409,5 +418,6 @@
     </div>
   </footer>
 
+  <script src="assets/js/cisai-header.js" defer></script>
 </body>
 </html>
