@@ -301,6 +301,98 @@ ul, ol { padding: 0; list-style: none; }
 .track__desc { color: var(--muted); }
 .track__desc + .track__desc { margin-top: 1em; }
 
+/* ---------- Mentors ---------- */
+/* Carousel modelled on cai-research-fellowship.com (square photo, name,
+   affiliation, prev/next arrows), drawn in this site's ink-box language. */
+
+.mentors__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+.mentors__head .section-title { margin-bottom: 0; }
+
+.mentors__controls { display: flex; gap: 8px; flex-shrink: 0; }
+.mentors__btn {
+  width: 44px;
+  height: 44px;
+  border: var(--border);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.mentors__btn:hover { background: var(--blue); border-color: var(--blue); color: var(--white); }
+.mentors__btn:disabled { opacity: 0.35; cursor: default; background: var(--white); border-color: var(--ink); color: var(--ink); }
+
+.mentors {
+  --per-view: 4;
+  --gap: 16px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--per-view) - 1) * var(--gap)) / var(--per-view));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.mentors::-webkit-scrollbar { display: none; }
+
+.mentor {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  background: var(--white);
+  border: var(--border);
+}
+.mentor__photo-link { display: block; border-bottom: var(--border); }
+.mentor__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--faint);
+}
+.mentor__body { padding: 18px 20px 22px; }
+.mentor__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.mentor__tag,
+.mentor__flag {
+  display: inline-block;
+  padding: 3px 8px;
+  border: var(--border);
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Track colour on stroke and text; no fill. */
+.mentor__tag--resilience   { border-color: var(--red);  color: var(--red); }
+.mentor__tag--coordination { border-color: #1e8a44;     color: #1e8a44; }
+.mentor__tag--empowerment  { border-color: var(--blue); color: var(--blue); }
+.mentor__tag--hope         { border-color: #7a3fc8;     color: #7a3fc8; }
+.mentor__flag { color: var(--ink); }
+.mentor__name {
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+.mentor__name a { color: inherit; text-decoration: none; }
+.mentor__name a:hover { color: var(--blue); }
+.mentor__affiliation { color: var(--muted); font-size: 15px; line-height: 1.45; }
+
 /* ---------- Key details ---------- */
 
 .details {
@@ -497,6 +589,7 @@ ul, ol { padding: 0; list-style: none; }
 
 @media (max-width: 1080px) {
   .calls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mentors { --per-view: 3; }
 }
 
 @media (max-width: 900px) {
@@ -513,6 +606,7 @@ ul, ol { padding: 0; list-style: none; }
 }
 
 @media (max-width: 640px) {
+  .mentors { --per-view: 1.35; --gap: 12px; }
   .tracks,
   .calls,
   .details { grid-template-columns: minmax(0, 1fr); }
