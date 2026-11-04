@@ -36,7 +36,7 @@
   --gutter: clamp(20px, 4vw, 56px);
   --section-pad: clamp(56px, 8vw, 104px);
   --max-width: 1240px;
-  --header-h: 76px;
+  --header-h: clamp(78px, 9.1vw, 109px); /* CISAI site header */
 
   /* Hex tile from cisai.co: 27.28 × 47.25 px, line only. */
   --hex-tile-size: 27.28px 47.25px;
@@ -178,60 +178,6 @@ ul, ol { padding: 0; list-style: none; }
   background: var(--white);
 }
 
-/* ---------- Header: the brand-architecture "pillar" lockup ---------- */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--page);
-  border-bottom: var(--border);
-}
-
-.site-header__inner {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  height: var(--header-h);
-}
-
-.pillar {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.pillar__mark { width: 48px; height: 48px; }
-.pillar__rule { width: 1px; height: 36px; background: var(--ink); }
-.pillar__name { font-family: var(--font-display); font-size: 19px; letter-spacing: 0.01em; }
-
-.site-nav {
-  display: flex;
-  gap: clamp(18px, 2.4vw, 36px);
-  margin-left: auto;
-}
-.site-nav a {
-  font-family: var(--font-display);
-  font-size: 12.75px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  padding: 6px 0;
-}
-.nav-label { position: relative; padding-bottom: 4px; }
-.nav-label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: var(--blue);
-  transition: background 0.15s ease;
-}
-.site-nav a:hover .nav-label::after { background: var(--red); }
-
 /* ---------- Hero ---------- */
 
 .hero { padding: clamp(40px, 6vw, 80px) 0 var(--section-pad); }
@@ -354,6 +300,98 @@ ul, ol { padding: 0; list-style: none; }
 .track__title { font-size: clamp(24px, 2.2vw, 30px); line-height: 1.1; margin: 0 0 14px; }
 .track__desc { color: var(--muted); }
 .track__desc + .track__desc { margin-top: 1em; }
+
+/* ---------- Mentors ---------- */
+/* Carousel modelled on cai-research-fellowship.com (square photo, name,
+   affiliation, prev/next arrows), drawn in this site's ink-box language. */
+
+.mentors__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+.mentors__head .section-title { margin-bottom: 0; }
+
+.mentors__controls { display: flex; gap: 8px; flex-shrink: 0; }
+.mentors__btn {
+  width: 44px;
+  height: 44px;
+  border: var(--border);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.mentors__btn:hover { background: var(--blue); border-color: var(--blue); color: var(--white); }
+.mentors__btn:disabled { opacity: 0.35; cursor: default; background: var(--white); border-color: var(--ink); color: var(--ink); }
+
+.mentors {
+  --per-view: 4;
+  --gap: 16px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--per-view) - 1) * var(--gap)) / var(--per-view));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.mentors::-webkit-scrollbar { display: none; }
+
+.mentor {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  background: var(--white);
+  border: var(--border);
+}
+.mentor__photo-link { display: block; border-bottom: var(--border); }
+.mentor__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--faint);
+}
+.mentor__body { padding: 18px 20px 22px; }
+.mentor__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.mentor__tag,
+.mentor__flag {
+  display: inline-block;
+  padding: 3px 8px;
+  border: var(--border);
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Track colour on stroke and text; no fill. */
+.mentor__tag--resilience   { border-color: var(--red);  color: var(--red); }
+.mentor__tag--coordination { border-color: #1e8a44;     color: #1e8a44; }
+.mentor__tag--empowerment  { border-color: var(--blue); color: var(--blue); }
+.mentor__tag--hope         { border-color: #7a3fc8;     color: #7a3fc8; }
+.mentor__flag { color: var(--ink); }
+.mentor__name {
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+.mentor__name a { color: inherit; text-decoration: none; }
+.mentor__name a:hover { color: var(--blue); }
+.mentor__affiliation { color: var(--muted); font-size: 15px; line-height: 1.45; }
 
 /* ---------- Key details ---------- */
 
@@ -551,8 +589,7 @@ ul, ol { padding: 0; list-style: none; }
 
 @media (max-width: 1080px) {
   .calls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .site-nav { display: none; }
-  .site-header .btn--small { margin-left: auto; }
+  .mentors { --per-view: 3; }
 }
 
 @media (max-width: 900px) {
@@ -569,15 +606,12 @@ ul, ol { padding: 0; list-style: none; }
 }
 
 @media (max-width: 640px) {
-  :root { --header-h: 64px; }
+  .mentors { --per-view: 1.35; --gap: 12px; }
   .tracks,
   .calls,
   .details { grid-template-columns: minmax(0, 1fr); }
   .details__item:nth-child(2) { border-top: var(--border); padding-top: 20px; }
   .call { min-height: 0; }
-  .pillar__mark { width: 32px; height: 32px; }
-  .pillar__name { font-size: 16px; }
-  .pillar { gap: 12px; }
 }
 
 @media (max-width: 420px) {
