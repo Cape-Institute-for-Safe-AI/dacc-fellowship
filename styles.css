@@ -301,6 +301,49 @@ ul, ol { padding: 0; list-style: none; }
 .track__desc { color: var(--muted); }
 .track__desc + .track__desc { margin-top: 1em; }
 
+/* Read more: inline expand. Animates height via grid-template-rows 0fr -> 1fr. */
+.track__more {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.track__more-inner {
+  overflow: hidden;
+  min-height: 0;
+  visibility: hidden; /* keeps hidden links out of the tab order */
+  transition: visibility 0s linear 0.35s;
+}
+.track__more.is-open { grid-template-rows: 1fr; }
+.track__more.is-open .track__more-inner { visibility: visible; transition-delay: 0s; }
+.track__subhead { font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; margin: 1.4em 0 0.5em; }
+.track__list { margin: 0; padding-left: 1.2em; color: var(--muted); }
+.track__list li + li { margin-top: 0.5em; }
+.track__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+}
+.track__toggle:hover { color: var(--blue); }
+.track__toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.track__toggle-icon {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.25s ease;
+}
+.track__toggle[aria-expanded="true"] .track__toggle-icon { transform: translateY(1px) rotate(-135deg); }
+
 /* ---------- Mentors ---------- */
 /* Carousel modelled on cai-research-fellowship.com (square photo, name,
    affiliation, prev/next arrows), drawn in this site's ink-box language. */
