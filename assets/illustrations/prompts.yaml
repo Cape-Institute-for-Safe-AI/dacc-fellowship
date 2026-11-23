@@ -1,5 +1,36 @@
 # Prompts for the site illustrations.
 #
+# CURRENT DELIVERY NOTE: the Pluralistic Futures refresh includes externally
+# generated / image-to-image assets that this legacy generator does not reproduce.
+# The subjects below retain the original source prompts, NOT the final edit
+# prompts. Do not run `all` expecting to recreate the currently displayed set.
+#
+# Current assets and provenance:
+# - hero-archipelago.webp: user-supplied archipelago illustration, five distinct
+#   islands linked to a central amphitheatre. Source:
+#   wide-technical-illustration-archipelago-five--dece23.png. White background
+#   removed and cropped to 1200x1180. The exact external prompt is not recorded.
+# - pluralism-fork.webp: user-supplied replacement for dacc-hex, showing three
+#   travellers and the Deceleration / Domination / Doom / Pluralism paths.
+#   Source: wide-view-fork-road-seen--1b5d30.png. Delivered at 1200x1200.
+#   The exact external prompt is not recorded.
+# - resilience / coordination / empowerment / hope.webp: image-to-image
+#   recolours of the original track illustrations via image_generate,
+#   model openai/gpt-5.4-image-2, landscape, using the archipelago as a colour
+#   reference. These are workflow notes, not verbatim generation prompts:
+#   preserve composition and linework; terracotta #B97D5A / #D79576,
+#   sandstone #E0B98B / #F4D0A7, olive #52784E / #72825E, deep green #4B573F,
+#   slate-blue accent #5E789E, cream #F2EAE1, charcoal #373B40. Remove bright
+#   cornflower and coral; keep stepped tones and a white background for cutout.
+#   Resilience: sandstone/terracotta cells and rim, warm metallic nodes.
+#   Coordination: sandstone land, olive highlands, slate oceans, terracotta ring.
+#   Empowerment: flat olive figures with one deep-green shadow step; retain
+#   chrome figures with terracotta/sandstone stripes.
+#   Hope: terracotta/sand rays, green hills, pale slate sky; retain steel ring.
+#   Backgrounds removed, then centred at 660px tall on transparent 1080x720.
+#   Exact edit prompts are preserved in the source conversation rather than
+#   reconstructed here. Recolour outputs are not pixel-identical to the inputs.
+#
 # Edit a `subject` (or the shared `style`), then regenerate just that image:
 #   python3 scripts/generate_illustrations.py hope
 # Regenerate everything:
